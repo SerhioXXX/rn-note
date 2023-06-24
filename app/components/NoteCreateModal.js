@@ -61,13 +61,15 @@ const NoteCreateModal = ({ visible, onClose, onSubmit, note, isEdit }) => {
 						value={title}
 						onChangeText={(text) => handleOnChangeText(text, 'title')}
 						placeholder='Title'
-						style={[styles.title, styles.input]}
+						placeholderTextColor='rgba(153, 153, 153, 0.4)'
+						style={[styles.input, styles.title]}
 					/>
 					<TextInput
 						value={description}
 						onChangeText={(text) => handleOnChangeText(text, 'description')}
 						multiline
 						placeholder='Description'
+						placeholderTextColor='rgba(153, 153, 153, 0.4)'
 						style={[styles.input, styles.description]}
 					/>
 					<View style={styles.btnContainer}>
@@ -110,7 +112,10 @@ const styles = StyleSheet.create({
 		marginBottom: 15,
 		fontWeight: 'bold',
 	},
-	description: {},
+	description: {
+		height: 40,
+		marginBottom: 15,
+	},
 	modalBG: {
 		flex: 1,
 		zIndex: -1,
